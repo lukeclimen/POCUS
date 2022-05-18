@@ -1,5 +1,9 @@
 /* Styling elements */
 
+* {
+  font-size: 16px;
+}
+
 h2 {
   font-size: 3rem;
   margin-top: 10px;
@@ -113,6 +117,22 @@ main {
   font-weight: 500;
 }
 
+.clickable-image-container {
+  position: relative;
+  top: -100px;
+}
+
 area:hover {
   cursor: pointer;
+}
+
+.multiple-choice-form {
+  display: grid;
+  font-size: 1.5rem;
+  grid-template-columns: max-content max-content;
+  grid-gap: .5em;
+}
+
+.multiple-choice-form label {
+  text-align: left;
 }
