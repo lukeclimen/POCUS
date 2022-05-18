@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Case Overview</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -14,90 +14,242 @@
     ></script>
   </head>
   <header>
-    <nav class="nav__bar">
-        <div class="">
-            <ul class="nav__list">
-                <li><a href="index.html">Home</a></li>
-            </ul>
+    <nav class="nav-bar">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
   <body>
-        <button data-modal-target=".overview">Open Modal</button>
+    <main>
+      <header>
+        <h2>
+          You decide to perform a lung POCUS first. Click through the different
+          probe locations.
+        </h2>
+        <button data-target="#overview">Review Information</button>
+      </header>
+      <div class="side-by-side">
+        <aside class="mc-questions-section">
+          <p>
+            What is the cause of the abnormality? There can be 1 or more
+            answers.
+          </p>
+          <form action="">
+            <input id="option1" type="checkbox" value="1" />
+            <label for="option1">No abnormality</label>
 
-        <main>
-            <header></header>
-            <aside class="mc-questions-section">
-                <form action="">
-                    <input id="option1" type="checkbox" value="1">
-                    <label for="option1">No abnormality</label>
+            <input id="option2" type="checkbox" value="2" />
+            <label for="option2">Pulmonary embolism</label>
 
-                    <input id="option2" type="checkbox" value="2">
-                    <label for="option2">Pulmonary embolism</label>
+            <input id="option3" type="checkbox" value="3" />
+            <label for="option3">Pulmonary edema</label>
 
-                    <input id="option3" type="checkbox" value="3">
-                    <label for="option3">Pulmonary edema</label>
+            <input id="option4" type="checkbox" value="4" />
+            <label for="option4">Pleural effusion</label>
 
-                    <input id="option4" type="checkbox" value="4">
-                    <label for="option4">Pleural effusion</label>
+            <input id="option5" type="checkbox" value="5" />
+            <label for="option5">Pneumonia</label>
 
-                    <input id="option5" type="checkbox" value="5">
-                    <label for="option5">Pneumonia</label>
+            <input id="option6" type="checkbox" value="6" />
+            <label for="option6">Pneumothorax</label>
 
-                    <input id="option6" type="checkbox" value="6">
-                    <label for="option6">Pneumothorax</label>
+            <input id="option7" type="checkbox" value="7" />
+            <label for="option7">COPD</label>
 
-                    <input id="option7" type="checkbox" value="7">
-                    <label for="option7">COPD</label>
+            <input type="submit" />
+          </form>
+        </aside>
 
-                    <input type="submit">
-                </form>
-            </aside>
-            <div class="clickable-image-container">
-            
-            <img src="images/subjectImage.png" alt="Image of Ultrasound sites on a torso" usemap="#ultrasound-locations">
-            <map name="ultrasound-locations">
-                <area shape="circle" coords="202, 230, 45" data-modal-target=".anterior-superior" alt="">
-            </map>
-            </div>
-        </main>
-
-        <div class="modal anterior-superior">       
-            <div class="modal-header">
-                <h1 class="title">Anterior Superior</h1>
-                <button data-close-button class="close-button">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Anterior Superior</p>
-            </div>
+        <div class="clickable-image-container">
+          <img
+            src="images/subjectImage.png"
+            alt="Image of Ultrasound sites on a torso"
+            usemap="#ultrasound-locations"
+          />
+          <map name="ultrasound-locations">
+            <area
+              shape="circle"
+              coords="202, 230, 45"
+              data-target="#anterior-superior"
+              alt="Anterior superior ultrasound location"
+            />
+            <area
+              shape="circle"
+              coords="89, 371, 45"
+              data-target="#lateral"
+              alt="Lateral ultrasound location"
+            />
+            <area
+              shape="circle"
+              coords="81, 471, 45"
+              data-target="#posterior-inferior"
+              alt="Posterior inferior ultrasound location"
+            />
+            <area
+              shape="circle"
+              coords="385, 443, 45"
+              data-target="#subxiphoid"
+              alt="Subxiphoid ultrasound location"
+            />
+            <area
+              shape="circle"
+              coords="432, 260, 38"
+              data-target="#parasternal-long-axis"
+              alt="Parasternal long axis ultrasound location"
+            />
+            <area
+              shape="circle"
+              coords="482, 329, 38"
+              data-target="#parasternal-short-axis"
+              alt="Parasternal short axis ultrasound location"
+            />
+            <area
+              shape="circle"
+              coords="560, 422, 45"
+              data-target="#apical-4-chamber"
+              alt="Apical 4-Chamber ultrasound location"
+            />
+          </map>
         </div>
+      </div>
+    </main>
 
-        <div class="modal overview">       
-            <div class="modal-header">
-                <h1 class="title">Case 1: Shortness of Breath</h1>
-                <button data-close-button class="close-button">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>A 79M arrives via EMS to the emergency department with shortness of breath and delirium.</p>
-                <p>He has a PMHx of HTN, DLD, T2DM (HbA1c 6%), and angina. His medications include amlodipine 5 mg po daily,
-                    hydrochlorothiazide 25 mg po daily, atorvastatin 40 mg po daily, metformin 1000 mg po bid, sitagliptin 100 mg
-                    po daily, aspirin 81 mg po daily, and a prn nitro spray.
-                </p>
-                <p>His vital signs are as follows: HR 110, BP 98/66, SpO2 93% on 6L by nasal prongs, RR 25, and T 36.8. On
-                    examination, he is in respiratory distress with bilateral crackles and reduced bibasilar breath sounds on auscultation.
-                    You are unable to appreciate the JVP (due to body habitus), murmurs, or extra heart sounds. He is alert but
-                    confused and unable to answer your questions.
-                </p>
-                <p>You have the following bloodwork: CBC (normal), electrolytes (normal), creatinine (elevated at 120), venous
-                    blood gases (mild respiratory alkalosis), and troponin (elevated at 220). His ECG shows diffuse mild ST depressions
-                    and T wave inversions.
-                </p>
-                <p>You're awaiting a chest X-ray. You see that he had a previous echocardiogram done last year, which shows a normal
-                    LVEF of 60%, no RWMA, and no significant valvular disease.
-                </p>
-                <p>You decide to perform a POCUS.</p>
-            </div>
-        </div>
-        <div class="overlay"></div>
+    <div class="modal video-modal" id="anterior-superior">
+      <div class="modal-header">
+        <h1 class="title">Anterior Superior</h1>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <table>
+          <thead>
+            <tr>
+              <th>Normal</th>
+              <th>What you See</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  class="us-gif"
+                  src="videos/Slide 3 _ normal anterior superior.gif"
+                  alt="Normal Anterior Superior View"
+                />
+              </td>
+              <td>
+                <img
+                  class="us-gif"
+                  src="videos/Slide 3 _ abnormal anterior superior.gif"
+                  alt="WYS Anterior Superior View"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="modal video-modal" id="lateral">
+      <div class="modal-header">
+        <h1 class="title">Lateral</h1>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Lateral</p>
+      </div>
+    </div>
+
+    <div class="modal video-modal" id="posterior-inferior">
+      <div class="modal-header">
+        <h1 class="title">Posterior Inferior</h1>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Posterior Inferior</p>
+      </div>
+    </div>
+
+    <div class="modal video-modal" id="subxiphoid">
+      <div class="modal-header">
+        <h1 class="title">Subxiphoid</h1>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Subxiphoid</p>
+      </div>
+    </div>
+
+    <div class="modal video-modal" id="parasternal-long-axis">
+      <div class="modal-header">
+        <h1 class="title">Parasternal Long Axis</h1>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Parasternal Long Axis</p>
+      </div>
+    </div>
+
+    <div class="modal video-modal" id="parasternal-short-axis">
+      <div class="modal-header">
+        <h1 class="title">Parasternal Short Axis</h1>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Parasternal Short Axis</p>
+      </div>
+    </div>
+
+    <div class="modal video-modal" id="apical-4-chamber">
+      <div class="modal-header">
+        <h1 class="title">Apical 4-Chamber</h1>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Apical 4-Chamber</p>
+      </div>
+    </div>
+
+    <div class="modal modal-active" id="overview">
+      <div class="modal-header">
+        <h1 class="title">Case 1: Shortness of Breath</h1>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>
+          A 79M arrives via EMS to the emergency department with shortness of
+          breath and delirium.
+        </p>
+        <p>
+          He has a PMHx of HTN, DLD, T2DM (HbA1c 6%), and angina. His
+          medications include amlodipine 5 mg po daily, hydrochlorothiazide 25
+          mg po daily, atorvastatin 40 mg po daily, metformin 1000 mg po bid,
+          sitagliptin 100 mg po daily, aspirin 81 mg po daily, and a prn nitro
+          spray.
+        </p>
+        <p>
+          His vital signs are as follows: HR 110, BP 98/66, SpO2 93% on 6L by
+          nasal prongs, RR 25, and T 36.8. On examination, he is in respiratory
+          distress with bilateral crackles and reduced bibasilar breath sounds
+          on auscultation. You are unable to appreciate the JVP (due to body
+          habitus), murmurs, or extra heart sounds. He is alert but confused and
+          unable to answer your questions.
+        </p>
+        <p>
+          You have the following bloodwork: CBC (normal), electrolytes (normal),
+          creatinine (elevated at 120), venous blood gases (mild respiratory
+          alkalosis), and troponin (elevated at 220). His ECG shows diffuse mild
+          ST depressions and T wave inversions.
+        </p>
+        <p>
+          You're awaiting a chest X-ray. You see that he had a previous
+          echocardiogram done last year, which shows a normal LVEF of 60%, no
+          RWMA, and no significant valvular disease.
+        </p>
+        <p>You decide to perform a POCUS.</p>
+      </div>
+    </div>
+    <div class="overlay overlay-active"></div>
     <script src="js/script.js"></script>
   </body>
 </html>

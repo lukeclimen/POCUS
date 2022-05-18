@@ -1,18 +1,42 @@
-.nav {
+/* Styling elements */
+
+h2 {
+  font-size: 3rem;
+  margin-top: 10px;
+}
+
+main {
+  margin: 10px;
   display: flex;
+  flex-direction: column;
 }
 
-.nav__list {
-  text-decoration: none;
+/* Styling style-specific divs */
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
 }
 
-.btn__link {
-  background-color: blue;
-  text-decoration: none;
-  padding: 10px;
-  color: white;
-  font-weight: 500;
+/* Styling Navigation Bar */
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  background-color: lightgray;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 5px;
 }
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  font: 2rem sans-serif;
+  padding-left: 10px;
+}
+
+/* Styling the Modals */
 
 .modal {
   background-color: white;
@@ -55,6 +79,13 @@
   padding-right: 10px;
 }
 
+.video-modal {
+  width: 80vw;
+  
+}
+
+/* Styling for grey-ed out background overlay */
+
 .overlay {
   position: fixed;
   opacity: 0;
@@ -70,4 +101,18 @@
 .overlay-active {
   opacity: 1;
   pointer-events: all;
+}
+
+/* Styling for specific element types */
+
+.btn-link {
+  background-color: blue;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+}
+
+area:hover {
+  cursor: pointer;
 }
