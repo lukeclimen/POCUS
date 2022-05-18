@@ -1,0 +1,73 @@
+.nav {
+  display: flex;
+}
+
+.nav__list {
+  text-decoration: none;
+}
+
+.btn__link {
+  background-color: blue;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  left: 50%;
+  max-width: 80%;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in;
+  width: 700px;
+  z-index: 10;
+}
+
+.modal-active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding-right: 10px;
+}
+
+.overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+.overlay-active {
+  opacity: 1;
+  pointer-events: all;
+}
