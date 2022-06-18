@@ -4,6 +4,11 @@
   font-size: 16px;
 }
 
+body {
+  height: 95vh;
+  overflow: hidden;
+}
+
 h2 {
   font-size: 3rem;
   margin-top: 10px;
@@ -20,6 +25,7 @@ main {
 .side-by-side {
   display: flex;
   flex-direction: row;
+  height: fit-content;
 }
 
 /* Styling Navigation Bar */
@@ -38,6 +44,12 @@ main {
   color: black;
   font: 2rem sans-serif;
   padding-left: 10px;
+}
+
+/* Main menu styling */
+
+.case__container {
+  margin: 30px;
 }
 
 /* Styling the Modals */
@@ -83,9 +95,34 @@ main {
   padding-right: 10px;
 }
 
+#overview {
+  width: 700px;
+}
+
 .video-modal {
   width: 80vw;
-  
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-areas: "Title1 Title2" "Video1 Video2";
+  justify-items: center;
+}
+
+#normal-video-header {
+  grid-area: "Title1";
+}
+
+#observed-video-header {
+  grid-area: "Title2";
+}
+
+#normal-video {
+  grid-area: "Video1";
+}
+
+#observed-video {
+  grid-area: "Video2";
 }
 
 /* Styling for grey-ed out background overlay */
@@ -135,4 +172,18 @@ area:hover {
 
 .multiple-choice-form label {
   text-align: left;
+}
+
+.mc-questions-section {
+  background-color: blue;
+  height: fit-content;
+}
+
+.video-header {
+  font-size: 2rem;
+}
+
+.us-gif {
+  width: 500px;
+  height: 400px;
 }

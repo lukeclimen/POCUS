@@ -71,43 +71,50 @@
             <area
               shape="circle"
               coords="202, 230, 45"
-              data-target="#anterior-superior"
+              data-target="#video-modal"
+              data-id="1"
               alt="Anterior superior ultrasound location"
             />
             <area
               shape="circle"
               coords="89, 371, 45"
-              data-target="#lateral"
+              data-target="#video-modal"
+              data-id="3"
               alt="Lateral ultrasound location"
             />
             <area
               shape="circle"
               coords="81, 471, 45"
-              data-target="#posterior-inferior"
+              data-target="#video-modal"
+              data-id="5"
               alt="Posterior inferior ultrasound location"
             />
             <area
               shape="circle"
               coords="385, 443, 45"
-              data-target="#subxiphoid"
+              data-target="#video-modal"
+              data-id="16"
               alt="Subxiphoid ultrasound location"
             />
             <area
               shape="circle"
               coords="432, 260, 38"
-              data-target="#parasternal-long-axis"
+              data-target="#video-modal"
+              data-id="10"
               alt="Parasternal long axis ultrasound location"
             />
             <area
               shape="circle"
               coords="482, 329, 38"
-              data-target="#parasternal-short-axis"
+              data-target="#video-modal"
+              data-id="12"
               alt="Parasternal short axis ultrasound location"
             />
             <area
               shape="circle"
               coords="560, 422, 45"
-              data-target="#apical-4-chamber"
+              data-target="#video-modal"
+              data-id="14"
               alt="Apical 4-Chamber ultrasound location"
             />
           </map>
@@ -115,99 +122,25 @@
       </div>
     </main>
 
-    <div class="modal video-modal" id="anterior-superior">
+    <div class="modal video-modal" id="video-modal">
       <div class="modal-header">
-        <h1 class="title">Anterior Superior</h1>
+        <h1 id="video-modal-header" class="title">Title</h1>
         <button data-close-button class="close-button">&times;</button>
       </div>
-      <div class="modal-body">
-        <table>
-          <thead>
-            <tr>
-              <th>Normal</th>
-              <th>What you See</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <img
-                  class="us-gif"
-                  src="videos/Slide 3 _ normal anterior superior.gif"
-                  alt="Normal Anterior Superior View"
-                />
-              </td>
-              <td>
-                <img
-                  class="us-gif"
-                  src="videos/Slide 3 _ abnormal anterior superior.gif"
-                  alt="WYS Anterior Superior View"
-                />
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="modal video-modal" id="lateral">
-      <div class="modal-header">
-        <h1 class="title">Lateral</h1>
-        <button data-close-button class="close-button">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p>Lateral</p>
-      </div>
-    </div>
-
-    <div class="modal video-modal" id="posterior-inferior">
-      <div class="modal-header">
-        <h1 class="title">Posterior Inferior</h1>
-        <button data-close-button class="close-button">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p>Posterior Inferior</p>
-      </div>
-    </div>
-
-    <div class="modal video-modal" id="subxiphoid">
-      <div class="modal-header">
-        <h1 class="title">Subxiphoid</h1>
-        <button data-close-button class="close-button">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p>Subxiphoid</p>
-      </div>
-    </div>
-
-    <div class="modal video-modal" id="parasternal-long-axis">
-      <div class="modal-header">
-        <h1 class="title">Parasternal Long Axis</h1>
-        <button data-close-button class="close-button">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p>Parasternal Long Axis</p>
-      </div>
-    </div>
-
-    <div class="modal video-modal" id="parasternal-short-axis">
-      <div class="modal-header">
-        <h1 class="title">Parasternal Short Axis</h1>
-        <button data-close-button class="close-button">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p>Parasternal Short Axis</p>
-      </div>
-    </div>
-
-    <div class="modal video-modal" id="apical-4-chamber">
-      <div class="modal-header">
-        <h1 class="title">Apical 4-Chamber</h1>
-        <button data-close-button class="close-button">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p>Apical 4-Chamber</p>
-      </div>
+      <grid class="modal-grid" id="video-modal">
+        <h3 id="normal-video-header"  class="video-header">Normal</h2>
+        <h3 id="observed-video-header" class="video-header">What you See</h2>
+        <img
+          id="normal-video"
+          class="us-gif"
+          alt="Normal Anterior Superior View"
+        />
+        <img
+          id="observed-video"
+          class="us-gif"
+          alt="WYS Anterior Superior View"
+        />
+      </grid>
     </div>
 
     <div class="modal modal-active" id="overview">

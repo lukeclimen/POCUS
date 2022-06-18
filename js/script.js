@@ -1,7 +1,6 @@
 $(function() {
     let openModalButtons = $('[data-target]');
     let closeModalButtons = $('[data-close-button]');
-    let overlay = $('.overlay');
 
     openModalButtons
     .click(function() {
@@ -9,6 +8,15 @@ $(function() {
         console.log(modal);
         $(modal).addClass("modal-active");
         $('.overlay').addClass("overlay-active");
+
+        if(modal != '#overview') {
+            let video = $(this).attr("data-id");
+            $('#observed-video').attr("src", "videos/" + video + ".gif");
+            video++;
+            $('#normal-video').attr("src", "videos/" + video + ".gif");
+            let title = $(this).attr("alt");
+            $('#video-modal-header').html(title);
+        }
     });
 
     closeModalButtons
